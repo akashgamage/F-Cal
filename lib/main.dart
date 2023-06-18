@@ -54,6 +54,7 @@ class _SimpleCalculatorState extends State<SimpleCalculator> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromARGB(255, 255, 255, 255),
       appBar: AppBar(
         title: const Text("Simple Calculator"),
       ),
@@ -63,7 +64,10 @@ class _SimpleCalculatorState extends State<SimpleCalculator> {
           children: [
             Text(
               "Result : $result",
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: const Color.fromARGB(255, 0, 0, 0)),
             ),
             const SizedBox(
               height: 50,
@@ -73,7 +77,7 @@ class _SimpleCalculatorState extends State<SimpleCalculator> {
               decoration: InputDecoration(
                   labelText: "First Number",
                   border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(16))),
+                      borderRadius: BorderRadius.circular(8))),
             ),
             const SizedBox(
               height: 20,
@@ -83,7 +87,7 @@ class _SimpleCalculatorState extends State<SimpleCalculator> {
               decoration: InputDecoration(
                   labelText: "Second Number",
                   border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(16))),
+                      borderRadius: BorderRadius.circular(8))),
             ),
             const SizedBox(
               height: 20,
