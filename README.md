@@ -23,7 +23,7 @@ samples, guidance on mobile development, and a full API reference.
         <td><b>Android</b></td>
     </tr>
     <tr>
-        <td><img src="images/Simulator%20Screenshot%20-%20iPhone%2014%20Pro%20Max%20-%202023-06-18%20at%2020.19.29.png" width="1080" height="2400"></td>
-        <td><img src="images/Screenshot_1687099901.png" width="1080" height="2400"></td>
+        <td><img src="images/Simulator%20Screenshot%20-%20iPhone%2014%20Pro%20Max%20-%202023-06-18%20at%2020.19.29.png" width="1080px" height="2400px"></td>
+        <td><img src="images/Screenshot_1687099901.png" width="1080px" height="2400px"></td>
     </tr>
 </table>
