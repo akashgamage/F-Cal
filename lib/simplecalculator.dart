@@ -1,12 +1,5 @@
 import 'package:flutter/material.dart';
 
-void main(List<String> args) {
-  runApp(const MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: SimpleCalculator(),
-  ));
-}
-
 class SimpleCalculator extends StatefulWidget {
   const SimpleCalculator({super.key});
 
