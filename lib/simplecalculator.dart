@@ -47,7 +47,7 @@ class _SimpleCalculatorState extends State<SimpleCalculator> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 255, 255, 255),
+      backgroundColor: const Color.fromARGB(255, 255, 255, 255),
       appBar: AppBar(
         title: const Text("Simple Calculator"),
       ),
@@ -57,10 +57,10 @@ class _SimpleCalculatorState extends State<SimpleCalculator> {
           children: [
             Text(
               "Result : $result",
-              style: TextStyle(
+              style: const TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
-                  color: const Color.fromARGB(255, 0, 0, 0)),
+                  color: Color.fromARGB(255, 0, 0, 0)),
             ),
             const SizedBox(
               height: 50,
@@ -88,57 +88,100 @@ class _SimpleCalculatorState extends State<SimpleCalculator> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                ElevatedButton(
-                    onPressed: () {
-                      add();
-                      controller1.clear();
-                      controller2.clear();
-                    },
-                    child: const Text(
-                      "+",
-                      style:
-                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                    )),
-                ElevatedButton(
-                    onPressed: () {
-                      sub();
-                      controller1.clear();
-                      controller2.clear();
-                    },
-                    child: const Text(
-                      "-",
-                      style:
-                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                    )),
+                SizedBox(
+                  height: 64,
+                  width: 150,
+                  child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                          shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(8),
+                      )),
+                      onPressed: () {
+                        add();
+                        controller1.clear();
+                        controller2.clear();
+                      },
+                      child: const Text(
+                        "Add (+)",
+                        style: TextStyle(
+                            fontSize: 20, fontWeight: FontWeight.bold),
+                      )),
+                ),
+                const SizedBox(
+                  width: 20,
+                ),
+                SizedBox(
+                  height: 64,
+                  width: 150,
+                  child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                          shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(8),
+                      )),
+                      onPressed: () {
+                        sub();
+                        controller1.clear();
+                        controller2.clear();
+                      },
+                      child: const Text(
+                        "Sub (-)",
+                        style: TextStyle(
+                            fontSize: 20, fontWeight: FontWeight.bold),
+                      )),
+                ),
               ],
+            ),
+            const SizedBox(
+              height: 20,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                ElevatedButton(
-                    onPressed: () {
-                      mul();
-                      controller1.clear();
-                      controller2.clear();
-                    },
-                    child: const Text(
-                      "*",
-                      style:
-                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                    )),
-                ElevatedButton(
-                    onPressed: () {
-                      divi();
-                      controller1.clear();
-                      controller2.clear();
-                    },
-                    child: const Text(
-                      "/",
-                      style:
-                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                    )),
+                SizedBox(
+                  height: 64,
+                  width: 150,
+                  child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                          shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(8),
+                      )),
+                      onPressed: () {
+                        mul();
+                        controller1.clear();
+                        controller2.clear();
+                      },
+                      child: const Text(
+                        "Mult (*)",
+                        style: TextStyle(
+                            fontSize: 20, fontWeight: FontWeight.bold),
+                      )),
+                ),
+                const SizedBox(
+                  width: 20,
+                ),
+                SizedBox(
+                  height: 64,
+                  width: 150,
+                  child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                          shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(8),
+                      )),
+                      onPressed: () {
+                        divi();
+                        controller1.clear();
+                        controller2.clear();
+                      },
+                      child: const Text(
+                        "Div (/)",
+                        style: TextStyle(
+                            fontSize: 20, fontWeight: FontWeight.bold),
+                      )),
+                ),
               ],
             ),
+            // Image.asset('assets/images/simplecal.jpg'),
+            Image.asset('assets/images/SimpleCal.png'),
           ],
         ),
       ),
