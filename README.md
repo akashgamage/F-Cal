@@ -19,7 +19,7 @@ samples, guidance on mobile development, and a full API reference.
 
 <b>Simple Calculator</b> 
 <br>
-<img src="assets/images/Simulator%20Screenshot%20-%20iPhone%2014%20Pro%20Max%20-%202023-07-04%20at%2020.37.22.png" width="800" height="1080">
+<img src="assets/images/Simulator%20Screenshot%20-%20iPhone%2014%20Pro%20Max%20-%202023-07-04%20at%2020.37.22.png" width="645" height="1398">
 
 
 <!-- <table>
