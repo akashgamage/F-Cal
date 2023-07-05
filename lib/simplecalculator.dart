@@ -56,14 +56,14 @@ class _SimpleCalculatorState extends State<SimpleCalculator> {
         child: Column(
           children: [
             Text(
-              "Result : $result",
+              "$result",
               style: const TextStyle(
-                  fontSize: 20,
+                  fontSize: 30,
                   fontWeight: FontWeight.bold,
                   color: Color.fromARGB(255, 0, 0, 0)),
             ),
             const SizedBox(
-              height: 50,
+              height: 40,
             ),
             TextField(
               controller: controller1,
@@ -83,7 +83,7 @@ class _SimpleCalculatorState extends State<SimpleCalculator> {
                       borderRadius: BorderRadius.circular(8))),
             ),
             const SizedBox(
-              height: 20,
+              height: 25,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
