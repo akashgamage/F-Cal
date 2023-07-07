@@ -22,7 +22,9 @@ class _mainhomeState extends State<mainhome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: const Text('Calculators')),
+        appBar: AppBar(
+            title: const Text('Calculators',
+                style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold))),
         body: Padding(
             padding: const EdgeInsets.all(50),
             child: Align(
@@ -31,17 +33,17 @@ class _mainhomeState extends State<mainhome> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     SizedBox(
-                      height: 88,
-                      width: 256,
+                      height: 80,
+                      width: 320,
                       child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
                               shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(16),
+                            borderRadius: BorderRadius.circular(8),
                           )),
                           child: const Text(
                             'Simple Calculator',
                             style: TextStyle(
-                                fontSize: 20, fontWeight: FontWeight.bold),
+                                fontSize: 24, fontWeight: FontWeight.bold),
                           ),
                           onPressed: () {
                             Navigator.push(
@@ -55,17 +57,17 @@ class _mainhomeState extends State<mainhome> {
                       height: 20,
                     ),
                     SizedBox(
-                      height: 88,
-                      width: 256,
+                      height: 80,
+                      width: 320,
                       child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
                               shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(16),
+                            borderRadius: BorderRadius.circular(8),
                           )),
                           child: const Text(
                             'Advanced Calculator',
                             style: TextStyle(
-                                fontSize: 20, fontWeight: FontWeight.bold),
+                                fontSize: 24, fontWeight: FontWeight.bold),
                           ),
                           onPressed: () {
                             Navigator.push(

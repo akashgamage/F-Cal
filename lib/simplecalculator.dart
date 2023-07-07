@@ -49,7 +49,8 @@ class _SimpleCalculatorState extends State<SimpleCalculator> {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 255, 255, 255),
       appBar: AppBar(
-        title: const Text("Simple Calculator"),
+        title: const Text("Simple Calculator",
+            style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
       ),
       body: Padding(
         padding: const EdgeInsets.all(50.0),
@@ -180,7 +181,6 @@ class _SimpleCalculatorState extends State<SimpleCalculator> {
                 ),
               ],
             ),
-            // Image.asset('assets/images/simplecal.jpg'),
             Image.asset('assets/images/SimpleCal.png'),
           ],
         ),
