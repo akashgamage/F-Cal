@@ -22,63 +22,96 @@ class _mainhomeState extends State<mainhome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-            title: const Text('Calculators',
-                style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold))),
-        body: Padding(
-            padding: const EdgeInsets.all(50),
-            child: Align(
-              alignment: Alignment.center,
+        backgroundColor: Colors.white,
+        body: ListView(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(32),
               child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    SizedBox(
-                      height: 80,
-                      width: 320,
-                      child: ElevatedButton(
-                          style: ElevatedButton.styleFrom(
-                              shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(8),
-                          )),
-                          child: const Text(
-                            'Simple Calculator',
-                            style: TextStyle(
-                                fontSize: 24, fontWeight: FontWeight.bold),
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Image.asset('assets/images/SimpleCal.png'),
+                  const Padding(
+                    padding: EdgeInsets.symmetric(vertical: 8.0),
+                    child: Text(
+                      'Calculators.',
+                      style:
+                          TextStyle(fontSize: 48, fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.symmetric(vertical: 8.0),
+                    child: Text(
+                      'Two interfaces, one powerful calculator app. Choose between simple or advanced UI for all your calculation needs.',
+                      style:
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 32.0),
+                    child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Container(
+                            width: double.infinity,
+                            child: ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                    shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(8),
+                                )),
+                                child: const Padding(
+                                  padding: EdgeInsets.all(20.0),
+                                  child: Text(
+                                    'Simple Calculator',
+                                    style: TextStyle(
+                                        fontSize: 24,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                ),
+                                onPressed: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              const SimpleCalculator()));
+                                }),
                           ),
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) =>
-                                        const SimpleCalculator()));
-                          }),
-                    ),
-                    const SizedBox(
-                      height: 20,
-                    ),
-                    SizedBox(
-                      height: 80,
-                      width: 320,
-                      child: ElevatedButton(
-                          style: ElevatedButton.styleFrom(
-                              shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(8),
-                          )),
-                          child: const Text(
-                            'Advanced Calculator',
-                            style: TextStyle(
-                                fontSize: 24, fontWeight: FontWeight.bold),
+                          const SizedBox(
+                            height: 32,
                           ),
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) =>
-                                        const AdvancedCalculator()));
-                          }),
-                    ),
-                  ]),
-            )));
+                          Container(
+                            width: double.infinity,
+                            child: ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                    shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(8),
+                                )),
+                                child: const Padding(
+                                  padding: EdgeInsets.all(20.0),
+                                  child: Text(
+                                    'Advanced Calculator',
+                                    style: TextStyle(
+                                        fontSize: 24,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                ),
+                                onPressed: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              const AdvancedCalculator()));
+                                }),
+                          ),
+                        ]),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ));
   }
 }
 

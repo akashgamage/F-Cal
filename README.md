@@ -17,9 +17,17 @@ samples, guidance on mobile development, and a full API reference.
 
 ### Output
 
+<b>Home Page</b> 
+<br>
+<img src="assets/images/1.png" width="322.5" height="699">
+
 <b>Simple Calculator</b> 
 <br>
-<img src="assets/images/Simple Calcilator.png" width="322.5" height="699">
+<img src="assets/images/2.png" width="322.5" height="699">
+
+<b>Advanced Calculator</b> 
+<br>
+<img src="assets/images/3.png" width="322.5" height="699">
 
 
 <!-- <table>
